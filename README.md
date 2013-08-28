@@ -19,12 +19,10 @@ Use
 
 With **maven** add the dependency:
 
-`
-	<dependency>
-		<groupId>com.github.tabla</groupId>
-		<artifactId>tabla</artifactId>
-		<version>VERSION</version>
-	</dependency>
-`
+    <dependency>
+        <groupId>com.github.tabla</groupId>
+        <artifactId>tabla</artifactId>
+        <version>VERSION</version>
+        </dependency>
 
 where `VERSION` is the version of Tabla you need (e.g. `1.0.0`).
