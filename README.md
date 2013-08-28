@@ -6,12 +6,10 @@ Tabla gives you table abstraction in Java.
 The main goal is to provide a useful tool for converting the state of an object **from** and/or **to** and a table structure.
 
 
-
 Requirements
 ------------
 
 TODO
-
 
 
 Use
@@ -25,4 +23,26 @@ With **maven** add the dependency:
         <version>VERSION</version>
     </dependency>
 
-where `VERSION` is the version of Tabla you need (e.g. `1.0.0`).
+where `VERSION` is the version of Tabla that you need (e.g. `1.0.0`).
+
+
+Source
+------
+
+Tabla' Git repo is available on Github, which can be browsed at:
+
+    http://github.com/tabla/tabla
+
+and cloned with:
+
+    git clone git://github.com/tabla/tabla.git
+
+
+Development
+-----------
+
+You need following tools to develop Tabla:
+
+* Maven
+* Git
+* a JDK
