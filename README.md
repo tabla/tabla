@@ -71,7 +71,7 @@ TODO
 
 ## <a name="contributor-list"></a> Contributor list
 
-[Roberto Simoni](rsimoni.job@gmail.com)
+[Roberto Simoni](mailto:rsimoni.job@gmail.com)
 
 
 ## <a name="credits"></a> Credits
