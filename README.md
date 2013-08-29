@@ -7,11 +7,11 @@ Table of contents
 -----------------
 
 * [Description](#description)
-* [Installation](#installation)
-* [Where to get help](#Where to get help)
-* [Contribution guidelines](#Contribution guidelines)
-* [Contributor list](#Contributor list)
-* [Credits](#Credits)
+* [How to use](#how to use)
+* [Where to get help](#where to get help)
+* [Contribution guidelines](#contribution guidelines)
+* [Contributor list](#contributor list)
+* [Credits](#credits)
 
 Description
 -----------
@@ -21,16 +21,30 @@ Tabla gives you table abstraction in Java.
 The main goal is to provide a useful tool for converting the state of an object **from** and/or **to** a table structure.
 
 
-Installation
+How to use
 ------------
 
-TODO
+If you are using [maven](http://maven.apache.org), you need simply to add the dependencies you need in your `pom.xml`. E.g.:
 
+    <dependency>
+        <groupId>com.github.tabla</groupId>
+        <artifactId>tabla</artifactId>
+        <version>${tabla.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>com.github.tabla</groupId>
+        <artifactId>tabla-jdbc</artifactId>
+        <version>${tabla.version}</version>
+    </dependency>
+
+where `tabla.version` could be a property defined in your `pom.xml` valued with the version you need (e.g. `1.0.0`).
+
+TODO
 
 Where to get help
 -----------------
 
-TODO
+If you need help, please send an email to tablacontacts@gmail.com or open an issue here in Github.
 
 
 Contribution guidelines
@@ -60,15 +74,6 @@ TODO
 Use
 ---
 
-With **maven** add the dependency:
-
-    <dependency>
-        <groupId>com.github.tabla</groupId>
-        <artifactId>tabla</artifactId>
-        <version>VERSION</version>
-    </dependency>
-
-where `VERSION` is the version of Tabla that you need (e.g. `1.0.0`).
 
 
 Source
