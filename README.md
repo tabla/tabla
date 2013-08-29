@@ -1,28 +1,28 @@
-Tabla [![Build Status](https://travis-ci.org/tabla/tabla.png?branch=master)](https://travis-ci.org/tabla/tabla)
-==========
+# Tabla [![Build Status](https://travis-ci.org/tabla/tabla.png?branch=master)](https://travis-ci.org/tabla/tabla)
 
 _Use table abstraction in your OO application_
 
-Table of contents
------------------
+
+## Table of contents
 
 * [Description](#description)
-* [How to use](#how_to_use)
+* [How to use](#how-to-use)
 * [Where to get help](#where to get help)
 * [Contribution guidelines](#contribution guidelines)
 * [Contributor list](#contributor list)
 * [Credits](#credits)
 
-Description
------------
+
+## <a name="description"></a>Description
 
 Tabla gives you table abstraction in Java.
 
 The main goal is to provide a useful tool for converting the state of an object **from** and/or **to** a table structure.
 
+TODO
 
-#How to use
-----------
+
+## <a name="how-to-use"></a>How to use
 
 If you are using [maven](http://maven.apache.org), you need simply to add the dependencies you need in your `pom.xml`. E.g.:
 
@@ -39,7 +39,6 @@ If you are using [maven](http://maven.apache.org), you need simply to add the de
 
 where `tabla.version` could be a property defined in your `pom.xml` valued with the version you need (e.g. `1.0.0`).
 
-TODO
 
 Where to get help
 -----------------
