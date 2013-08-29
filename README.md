@@ -7,7 +7,7 @@ Table of contents
 -----------------
 
 * [Description](#description)
-* [How to use](#How to use)
+* [How to use](#how_to_use)
 * [Where to get help](#where to get help)
 * [Contribution guidelines](#contribution guidelines)
 * [Contributor list](#contributor list)
