@@ -13,45 +13,6 @@
 	<name>tabla</name>
 	<description>Table abstractions for Java that need only a JRE to be used. E.g. TableInMemory, TableJdbc, etc...</description>
 
-	<!--
-	<scm>
-		<connection>scm:git:git@github.com:tabla/tabla.git</connection>
-		<url>scm:git:git@github.com:tabla/tabla.git</url>
-		<developerConnection>scm:git:git@github.com:tabla/tabla.git</developerConnection>
-	</scm>
-
-	<licenses>
-		<license>
-			<name>The Apache Software License, Version 2.0</name>
-			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-			<distribution>repo</distribution>
-		</license>
-	</licenses>
-
-	<developers>
-		<developer>
-			<name>Roberto Simoni</name>
-			<email>roberto.simoni@yahoo.it</email>
-			<roles>
-				<role>Lead Developer</role>
-			</roles>
-		</developer>
-	</developers>
-
-	<issueManagement>
-		<system>Github Issue Tracker</system>
-		<url>https://github.com/tabla/tabla/issues</url>
-	</issueManagement>
-
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<java.version>1.6</java.version>
-
-		<junit.version>4.11</junit.version>
-		<jmock.version>2.6.0</jmock.version>
-	</properties>
-	-->
-
 	<dependencies>
 
 		<!-- == Testing ===================================== -->
@@ -160,39 +121,5 @@
 		</plugins>
 
 	</build>
-
-	<!--
-	<profiles>
-		<!- This profile will sign the JAR file, sources file, and javadocs file 
-			using the GPG key on the local machine. See: https://docs.sonatype.org/display/Repository/How+To+Generate+PGP+Signatures+With+Maven ->
-		<profile>
-			<id>release-sign-artifacts</id>
-			<activation>
-				<property>
-					<name>release</name>
-					<value>true</value>
-				</property>
-			</activation>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-gpg-plugin</artifactId>
-						<version>1.4</version>
-						<executions>
-							<execution>
-								<id>sign-artifacts</id>
-								<phase>package</phase>
-								<goals>
-									<goal>sign</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-	</profiles>
-	-->
 
 </project>
