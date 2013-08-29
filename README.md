@@ -1,10 +1,22 @@
 Tabla
 =====
 
+[![Build Status](https://travis-ci.org/tabla/tabla.png?branch=master)](https://travis-ci.org/tabla/tabla)
+
 Tabla gives you table abstraction in Java.
 
-The main goal is to provide a useful tool for converting the state of an object **from** and/or **to** and a table structure.
+The main goal is to provide a useful tool for converting the state of an object **from** and/or **to** a table structure.
 
+
+Table of contents
+-----------------
+
+* Description
+* Installation
+* Where to get help
+* Contribution guidelines
+* Contributor list
+* Credits
 
 Requirements
 ------------
