@@ -1,6 +1,6 @@
 # Tabla [![Build Status](https://travis-ci.org/tabla/tabla.png?branch=master)](https://travis-ci.org/tabla/tabla)
 
-_Use table abstraction in your OO application_
+_Use table abstractions in your OO application_
 
 
 ## Table of contents
