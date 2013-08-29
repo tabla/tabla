@@ -7,17 +7,48 @@ Table of contents
 -----------------
 
 * [Description](#description)
-* Installation
-* Where to get help
-* Contribution guidelines
-* Contributor list
-* Credits
+* [Installation](#installation)
+* [Where to get help](#Where to get help)
+* [Contribution guidelines](#Contribution guidelines)
+* [Contributor list](#Contributor list)
+* [Credits](#Credits)
 
 Description
 -----------
 
 Tabla gives you table abstraction in Java.
+
 The main goal is to provide a useful tool for converting the state of an object **from** and/or **to** a table structure.
+
+
+Installation
+------------
+
+TODO
+
+
+Where to get help
+-----------------
+
+TODO
+
+
+Contribution guidelines
+-----------------------
+
+TODO
+
+
+Contributor list
+----------------
+
+TODO
+
+
+Credits
+-------
+
+TODO
 
 
 Requirements
