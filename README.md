@@ -1,7 +1,5 @@
-Tabla
-=====
-
-[![Build Status](https://travis-ci.org/tabla/tabla.png?branch=master)](https://travis-ci.org/tabla/tabla)
+Tabla [![Build Status](https://travis-ci.org/tabla/tabla.png?branch=master)](https://travis-ci.org/tabla/tabla)
+==========
 
 Tabla gives you table abstraction in Java.
 
