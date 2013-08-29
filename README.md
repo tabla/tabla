@@ -21,8 +21,8 @@ Tabla gives you table abstraction in Java.
 The main goal is to provide a useful tool for converting the state of an object **from** and/or **to** a table structure.
 
 
-How to use
-------------
+#How to use
+----------
 
 If you are using [maven](http://maven.apache.org), you need simply to add the dependencies you need in your `pom.xml`. E.g.:
 
