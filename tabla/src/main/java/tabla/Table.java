@@ -1,8 +1,10 @@
 package tabla;
 
 /**
- * Represents a table.
+ * Represents a table with specified columns.
+ * 
+ * @param <COLUMNS> columns
  */
-public interface Table {
+public interface Table<COLUMNS extends Columns> {
 
 }
