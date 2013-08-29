@@ -3,8 +3,8 @@ package tabla;
 /**
  * Represents a row of specified columns.
  *
- * @param <COLUMNS> columns
+ * @param <C> columns of the row
  */
-public interface Row<COLUMNS extends Columns> {
+public interface Row<C extends Columns> {
 
 }
