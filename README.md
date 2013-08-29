@@ -1,4 +1,4 @@
-# Tabla [![Build Status](https://travis-ci.org/tabla/tabla.png?branch=master)](https://travis-ci.org/tabla/tabla)
+# Tabla [![Build Status](https://travis-ci.org/tabla/tabla.png?branch=master)](https://travis-ci.org/tabla/tabla) [![License](http://upload.wikimedia.org/wikipedia/commons/3/36/License_icon-mit-2.png)](http://opensource.org/licenses/MIT)
 
 _Use table abstractions in your OO application_
 
