@@ -34,18 +34,7 @@ public class TableInMemory<C extends ColumnsDefinition> implements Table<C> {
 	public void update(Row<C> row) {
 		LOG.info("updating row " + row + "...");
 		
-		Key key = columnsDefinition.getKey();
-		int position = -1;
-		int i = 0;
-		for (Row<C> each : rows) {
-			if (key.sameKey(each, row)) {
-				position = i;
-				break;
-			}
-			
-			i++;
-		}
-		
+		int position = indexOf(row);
 		if (position < 0) {
 			LOG.severe("unable to find any row matching key of " + row);
 			throw new IllegalStateException("unable to find any row matching key of " + row);
@@ -57,9 +46,33 @@ public class TableInMemory<C extends ColumnsDefinition> implements Table<C> {
 	}
 
 	@Override
+	public int indexOf(Row<C> row) {
+		Key key = columnsDefinition.getKey();
+		int position = -1;
+		int i = 0;
+		for (Row<C> each : rows) {
+			if (key.sameKey(each, row)) {
+				position = i;
+				break;
+			}
+			
+			i++;
+		}
+		return position;
+	}
+
+	@Override
 	public void remove(Row<C> row) {
-		// TODO
-		throw new UnsupportedOperationException("This operation has to be implemented yet");
+		LOG.info("removing row " + row + "...");
+
+		int index = indexOf(row);
+		if (index < 0) {
+			LOG.severe("unable to find any row matching key of " + row);
+			throw new IllegalStateException("unable to find any row matching key of " + row);
+		}
+
+		rows.remove(index);
+		LOG.info("... row removed");
 	}
 
 	@Override

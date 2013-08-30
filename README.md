@@ -24,16 +24,11 @@ TODO provide an example
 
 ## <a name="how-to-use"></a>How to use
 
-If you are using [maven](http://maven.apache.org), you need simply to add the dependencies you need in your `pom.xml`. E.g.:
+If you are using [maven](http://maven.apache.org), you need simply to add this dependency in your `pom.xml`. E.g.:
 
     <dependency>
         <groupId>com.github.tabla</groupId>
         <artifactId>tabla</artifactId>
-        <version>${tabla.version}</version>
-    </dependency>
-    <dependency>
-        <groupId>com.github.tabla</groupId>
-        <artifactId>tabla-jdbc</artifactId>
         <version>${tabla.version}</version>
     </dependency>
 
