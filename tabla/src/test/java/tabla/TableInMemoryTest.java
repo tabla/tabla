@@ -67,6 +67,32 @@ public class TableInMemoryTest {
 		assertEquals("bbb", table.first().getValue(CruiseColumnsDefinition.DESCRIPTION));
 	}
 
+	@Test(expected=IllegalStateException.class)
+	public void remove_throws_an_error_when_specified_row_does_not_exist() {
+		TableInMemory<CruiseColumnsDefinition> table = newTable();
+		Row<CruiseColumnsDefinition> row = RowBuilder.aRow(CruiseColumnsDefinition.DEFINITION)
+			.with(CruiseColumnsDefinition.DEPLOYMENT,  "C")
+			.with(CruiseColumnsDefinition.CODE,        "12345678")
+			.with(CruiseColumnsDefinition.NAME,        "AAA")
+			.with(CruiseColumnsDefinition.DESCRIPTION, "aaa")
+			.toRow();
+		table.remove(row);
+	}
+
+	@Test public void remove_empty_the_table() {
+		TableInMemory<CruiseColumnsDefinition> table = newTable();
+		Row<CruiseColumnsDefinition> row = RowBuilder.aRow(CruiseColumnsDefinition.DEFINITION)
+			.with(CruiseColumnsDefinition.DEPLOYMENT,  "C")
+			.with(CruiseColumnsDefinition.CODE,        "12345678")
+			.with(CruiseColumnsDefinition.NAME,        "AAA")
+			.with(CruiseColumnsDefinition.DESCRIPTION, "aaa")
+			.toRow();
+		table.add(row);
+		
+		table.remove(row);
+		assertEquals(0, table.count());
+	}
+
 	private TableInMemory<CruiseColumnsDefinition> newTable() {
 		return new TableInMemory<CruiseColumnsDefinition>(CruiseColumnsDefinition.DEFINITION);
 	}
