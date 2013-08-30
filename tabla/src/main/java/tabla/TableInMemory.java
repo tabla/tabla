@@ -1,19 +1,33 @@
 package tabla;
 
 import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.logging.Logger;
 
 /**
  * Represents an implementation of {@link Table} all in memory.
  *
  * @param <C> columns
- * @param <K> key of the table
  */
-public class TableInMemory<C extends Columns, K extends Columns> implements Table<C, K> {
+public class TableInMemory<C extends ColumnsDefinition> implements Table<C> {
 
+	private static final Logger LOG = Logger.getLogger(TableInMemory.class.getName());
+	
 	@Override
 	public void add(Row<C> row) {
-		// TODO
-		throw new UnsupportedOperationException("This operation has to be implemented yet");
+		LOG.info("adding row " + row + "...");
+		
+		Key key = columnsDefinition.getKey();
+		for (Row<C> each : rows) {
+			if (key.sameKey(each, row)) {
+				LOG.severe("a row with the same key (" + key + ") already exists (row " + row + ")");
+				throw new IllegalStateException("a rows with the same key already exists");
+			}
+		}
+		
+		this.rows.add(row);
+		LOG.info("... row added");
 	}
 
 	@Override
@@ -30,8 +44,7 @@ public class TableInMemory<C extends Columns, K extends Columns> implements Tabl
 
 	@Override
 	public int count() {
-		// TODO
-		throw new UnsupportedOperationException("This operation has to be implemented yet");
+		return rows.size();
 	}
 
 	@Override
@@ -64,4 +77,18 @@ public class TableInMemory<C extends Columns, K extends Columns> implements Tabl
 		throw new UnsupportedOperationException("This operation has to be implemented yet");
 	}
 
+	@Override
+	public String toString() {
+		return "[columns definition=" + columnsDefinition + ", rows=" + rows.size() + "]";
+	}
+
+	public TableInMemory(C columnsDefinition) {
+		super();
+		this.columnsDefinition = columnsDefinition;
+		this.rows = new LinkedList<Row<C>>();
+	}
+
+	private final List<Row<C>> rows;
+	private final C columnsDefinition;
+	
 }
