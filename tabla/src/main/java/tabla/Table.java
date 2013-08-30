@@ -4,9 +4,8 @@ package tabla;
  * Represents a table with specified columns.
  * 
  * @param <C> columns of the table
- * @param <K> key of the table
  */
-public interface Table<C extends Columns, K extends Columns> extends Iterable<Row<C>> {
+public interface Table<C extends ColumnsDefinition> extends Iterable<Row<C>> {
 
 	/**
 	 * Add specified row to this table.
