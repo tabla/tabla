@@ -1,6 +1,8 @@
 package tabla;
 
 import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Represents an implementation of {@link Table} all in memory.
@@ -10,10 +12,16 @@ import java.util.Iterator;
  */
 public class TableInMemory<C extends Columns, K extends Columns> implements Table<C, K> {
 
+	private final List<Row<C>> rows;
+	
+	public TableInMemory() {
+		super();
+		this.rows = new LinkedList<Row<C>>();
+	}
+
 	@Override
 	public void add(Row<C> row) {
-		// TODO
-		throw new UnsupportedOperationException("This operation has to be implemented yet");
+		this.rows.add(row);
 	}
 
 	@Override
@@ -30,8 +38,7 @@ public class TableInMemory<C extends Columns, K extends Columns> implements Tabl
 
 	@Override
 	public int count() {
-		// TODO
-		throw new UnsupportedOperationException("This operation has to be implemented yet");
+		return rows.size();
 	}
 
 	@Override

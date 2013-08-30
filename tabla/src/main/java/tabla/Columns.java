@@ -1,5 +1,6 @@
 package tabla;
 
+import java.util.Arrays;
 import java.util.Iterator;
 
 /**
@@ -7,10 +8,16 @@ import java.util.Iterator;
  */
 public class Columns implements Iterable<Column> {
 
+	private final Column[] cols;
+	
+	protected Columns(Column... cols) {
+		super();
+		this.cols = cols;
+	}
+
 	@Override
 	public Iterator<Column> iterator() {
-		// TODO
-		throw new UnsupportedOperationException("This operation has to be implemented yet");
+		return Arrays.asList(cols).iterator();
 	}
 
 }
