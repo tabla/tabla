@@ -32,8 +32,28 @@ public class TableInMemory<C extends ColumnsDefinition> implements Table<C> {
 
 	@Override
 	public void update(Row<C> row) {
-		// TODO
-		throw new UnsupportedOperationException("This operation has to be implemented yet");
+		LOG.info("updating row " + row + "...");
+		
+		Key key = columnsDefinition.getKey();
+		int position = -1;
+		int i = 0;
+		for (Row<C> each : rows) {
+			if (key.sameKey(each, row)) {
+				position = i;
+				break;
+			}
+			
+			i++;
+		}
+		
+		if (position < 0) {
+			LOG.severe("unable to find any row matching key of " + row);
+			throw new IllegalStateException("unable to find any row matching key of " + row);
+		}
+
+		rows.set(position, row);
+		
+		LOG.info("... row updated");
 	}
 
 	@Override
@@ -49,8 +69,9 @@ public class TableInMemory<C extends ColumnsDefinition> implements Table<C> {
 
 	@Override
 	public Row<C> first() {
-		// TODO
-		throw new UnsupportedOperationException("This operation has to be implemented yet");
+		if (rows.size() > 0)
+			return rows.get(0);
+		return null;
 	}
 
 	@Override
