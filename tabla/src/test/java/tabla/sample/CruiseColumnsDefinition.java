@@ -6,7 +6,6 @@ import java.util.Collection;
 import tabla.Column;
 import tabla.ColumnsDefinition;
 import tabla.Key;
-import tabla.Column.Type;
 import tabla.key.MultipleColumnsKey;
 
 public final class CruiseColumnsDefinition extends ColumnsDefinition {
