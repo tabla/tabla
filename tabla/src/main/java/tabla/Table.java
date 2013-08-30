@@ -65,4 +65,12 @@ public interface Table<C extends ColumnsDefinition> extends Iterable<Row<C>> {
 	 */
 	public boolean contains(Row<C> row);
 	
+	/**
+	 * Returns the index of specified row (0-based).
+	 * 
+	 * @param row a {@link Row}
+	 * @return index of specified row (0-based) or -1 if row is not found
+	 */
+	public int indexOf(Row<C> row);
+	
 }
