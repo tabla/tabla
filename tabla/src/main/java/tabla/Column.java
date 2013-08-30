@@ -6,23 +6,25 @@ package tabla;
  */
 public class Column {
 
-	private final String name;
-	private final Type type;
-
+	/**
+	 * Represents a supported column type.
+	 */
 	public static enum Type { text, number, datetime, bool };
 	
-	public Column(String name, Type type) {
-		if (name == null || name.trim().length() == 0) throw new IllegalArgumentException("'name' parameter cannot be null");
-		if (type == null) throw new IllegalArgumentException("'type' parameter cannot be null");
-		
-		this.name = name;
-		this.type = type;
-	}
-
+	/**
+	 * Returns the name of the column.
+	 * 
+	 * @return the name of the column
+	 */
 	public String getName() {
 		return name;
 	}
 
+	/**
+	 * Returns the type of the column.
+	 * 
+	 * @return the type of the column
+	 */
 	public Type getType() {
 		return type;
 	}
@@ -54,7 +56,28 @@ public class Column {
 
 	@Override
 	public String toString() {
-		return "Column [name=" + name + ", type=" + type + "]";
+		return new StringBuilder(name)
+			.append("<")
+			.append(type)
+			.append(">")
+			.toString();
 	}
 
+	/**
+	 * Create a column with specified name and type.
+	 * 
+	 * @param name name of the column
+	 * @param type type of the column
+	 */
+	public Column(String name, Type type) {
+		if (name == null || name.trim().length() == 0) throw new IllegalArgumentException("'name' parameter cannot be null");
+		if (type == null) throw new IllegalArgumentException("'type' parameter cannot be null");
+		
+		this.name = name;
+		this.type = type;
+	}
+
+	private final String name;
+	private final Type type;
+	
 }

@@ -6,19 +6,31 @@ import java.util.Map;
 /**
  * Represents a row of specified columns.
  *
- * @param <C> columns of the row
+ * @param <C> columns definition
  */
-public class Row<C extends Columns> {
+public class Row<C extends ColumnsDefinition> {
 
-	private final Map<Column, Object> values;
+	/**
+	 * Return the value of specified column.
+	 * 
+	 * @param column a column in this row
+	 * @return value of specified column
+	 */
+	public Object getValue(Column column) {
+		return values.get(column);
+	}
+
+	@Override
+	public String toString() {
+		return values.toString();
+	}
 	
-	public Row() {
+	Row(Map<Column, Object> values) {
 		super();
 		this.values = new LinkedHashMap<Column, Object>();
+		this.values.putAll(values);
 	}
-
-	public void set(Column column, Object value) {
-		values.put(column, value);
-	}
+	
+	private final Map<Column, Object> values;
 
 }
